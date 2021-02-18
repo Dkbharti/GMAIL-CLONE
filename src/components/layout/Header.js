@@ -11,10 +11,12 @@ const Header = () => {
     return (
         <Wrapper>
             <LogoWrapper>
-                <div>
+                <Menu>
                     {/* menu icon */}<MenuIcon/>
-                </div>
+                </Menu>
+                <Logo>
                 <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_r2.png" alt=""/>
+                </Logo>
             </LogoWrapper>
             <SearchWrapper>
                 <SerachBarWrapper>
@@ -43,10 +45,55 @@ const Wrapper = styled.div`
     height:70px;
     align-items:center;
 `
-const LogoWrapper = styled.div``
-
+const LogoWrapper = styled.div`
+    height:45px;
+    display:grid;
+    grid-template-columns:25% auto;
+    `
+const Menu = styled.div`
+    display:grid;
+    place-items:center;
+`    
+const Logo = styled.div`
+    height:45px;
+    display:flex;
+`
 const SearchWrapper = styled.div``
 
-const SerachBarWrapper= styled.div``
+const SerachBarWrapper= styled.div`
+    background-color:#f1f3f4;
+    width:100%;
+    max-width:750px;
+    display:grid;
+    grid-template-columns:10% auto 7%;
+    place-items:center;
+    height:45px;
+    border-radius:6px;
 
-const IconsWrapper = styled.div``
+    .MuiSvgIcon-root{
+        color:#5f6368;
+    }
+    input{
+        width:100%;
+        height:30px;
+        background:none;
+        border:none;
+
+        :focus{
+            outline:none;
+        }
+    }
+`
+
+const IconsWrapper = styled.div`
+    margin-left:8px;
+    display:grid;
+    grid-template-columns:repeat(4, auto);
+
+
+
+     
+    .MuiSvgIcon-root{
+        color:#5f6368;
+    }
+`
